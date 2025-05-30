@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace VendorName\Skeleton\Tests;
+namespace PurwantoId\EventSource\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
+use PurwantoId\EventSource\EventSourceServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            static fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            static fn (string $modelName) => 'PurwantoId\\EventSource\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
@@ -33,7 +33,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app): array
     {
         return [
-            SkeletonServiceProvider::class,
+            EventSourceServiceProvider::class,
         ];
     }
 }

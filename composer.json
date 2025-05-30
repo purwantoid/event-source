@@ -1,12 +1,12 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "purwantoid/event-source",
+    "description": "This is my package event-source",
     "keywords": [
-        ":vendor_name",
+        "purwantoid",
         "laravel",
-        ":package_slug"
+        "event-source"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/purwantoid/event-source",
     "license": "MIT",
     "authors": [
         {
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "PurwantoId\\EventSource\\": "src/",
+            "PurwantoId\\EventSource\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "PurwantoId\\EventSource\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -57,10 +57,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "PurwantoId\\EventSource\\EventSourceServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "EventSource": "PurwantoId\\EventSource\\Facades\\EventSource"
             }
         }
     },
@@ -76,9 +76,6 @@
             "@test:typos",
             "@test:pest",
             "@test:refactor"
-        ],
-        "post-install-cmd": [
-            "php configure"
         ]
     }
 }
